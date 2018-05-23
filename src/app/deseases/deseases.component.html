@@ -1,0 +1,6 @@
+<h3>Your searched result:</h3>
+<ul>
+    <li *ngFor ="let desease of deseases" (click) ="onSelect(desease)">{{desease.name}}</li>
+</ul>
+
+<app-desease-detail [desease] = "selectedDesease"></app-desease-detail>
