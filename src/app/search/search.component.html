@@ -2,9 +2,10 @@
   <img src = "../assets/logo.png" alt= "Wikipedib">
   <form class="form-wrapper cf" [formGroup]= "searchForm" (ngSubmit)= "search(searchForm.value)">
     <input type="text" placeholder="Search here..." formControlName="searchContent">
+    <ul>
+        <li *ngFor= "let recommendation of recommendations"><a href="#home">{{recommendation.name}}</a></li>
+    </ul>
     <button type="submit" [disabled] = "!searchForm.valid">Search</button>
   </form>
 </div>
-<ul>
-  <li *ngFor= "let recommendation of recommendations"> {{recommendation.name}}</li>
-</ul>
+
