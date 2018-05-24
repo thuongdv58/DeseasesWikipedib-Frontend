@@ -12,13 +12,21 @@ export class DeseaseDetailComponent implements OnInit {
   // @Input() desease: any;
   desease: any;
   deseaseId: any;
-  constructor(private activateRoute: ActivatedRoute, private deseasesService: DeseasesService) {
-    this.desease = this.deseasesService.getDeseaseDetail(this.activateRoute.params["id"])
-      this.activateRoute.queryParams.subscribe(queries => {
-      });
+  constructor(private activateRoute: ActivatedRoute, private router: Router, private deseasesService: DeseasesService) {
   }
 
   ngOnInit() {
+    this.desease = this.deseasesService.getDeseaseDetail(this.activateRoute.params["id"])
+      this.activateRoute.queryParams.subscribe(queries => {
+    });
   }
 
+  deleteCurrent(){
+    this.deseasesService.deleteADesease(this.desease.id);
+    // redirect to another route
+    this.router.navigate(['/deseases']);
+  }
+  modifyCurrent(){
+    //
+  }
 }

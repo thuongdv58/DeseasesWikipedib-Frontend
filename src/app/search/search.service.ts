@@ -10,15 +10,18 @@ export class SearchService {
   searchForDeseases(content: string, page: Number){
     return [{
       id: 1,
-      name: "blah blah"
+      name: "Blah blah benh",
+      abstract: "<p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p> <p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p>"
     },
     {
-      id: 1,
-      name: "shot"
+      id: 5,
+      name: "Shot your ass",
+      abstract: "<p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p> <p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p>"
     },
     {
       id: 2,
-      name: "shjt"
+      name: "Shjt your face",
+      abstract: "<p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p> <p>Blah something fucking awesome here hehe. there you got a shitty desease which no one can cure!</p>"
     }]
   }
 
@@ -26,11 +29,15 @@ export class SearchService {
     return [
       {
         id: 2,
-        name: "wahh"
+        name: "Tâm thần"
       },
       {
         id: 3,
-        name: "hell yeah"
+        name: "Động kinh"
+      },
+      {
+        id: 6,
+        name: "Vãi cc1"
       }
     ]
   }

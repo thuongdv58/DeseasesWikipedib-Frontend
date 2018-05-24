@@ -1,5 +1,11 @@
-<p>
-  Viewing {{desease.name}}
+<button><a href="/add-desease">new</a></button>
+<button><a href="javascript:;" (click)= "deleteCurrent()">Delete</a></button>
+<button><a href="javascript:;" (click)= "modifyCurrent()">Modify</a></button>
+<h2>{{desease.name}}</h2>
+<h3>Abstract:</h3>
+<p>{{desease.abstract}}</p>
 
-  {{deseaseId}}
-</p>
+<div *ngFor= "let attribute of desease.attributes">
+  <h3>{{attribute.name}}:</h3>
+  <p>{{attribute.content}}</p>
+</div>

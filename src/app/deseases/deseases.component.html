@@ -1,13 +1,18 @@
+<button><a href="/add-desease">new</a></button>
 <div *ngIf="searchResults">
   <h3>Found results for searched content "{{searchContent}}":</h3>
   <ul>
-      <li *ngFor ="let desease of searchResults" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a></li>
+      <li *ngFor ="let desease of searchResults" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a>
+        <br><span>{{desease.abstract}}</span>
+      </li>
   </ul>
 </div>
 
 <div *ngIf="deseases">
   <h3>List of deseases:</h3>
   <ul>
-      <li *ngFor ="let desease of deseases" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a></li>
+      <li *ngFor ="let desease of deseases" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a>
+        <span>{{desease.abstract}}</span>
+      </li>
   </ul>
 </div>
