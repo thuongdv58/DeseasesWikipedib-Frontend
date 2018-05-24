@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
+import { DeseasesService } from "../deseases/deseases.service";
 
 @Component({
   selector: 'app-desease-detail',
@@ -7,8 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DeseaseDetailComponent implements OnInit {
 
-  @Input() desease: any;
-  constructor() { }
+  // @Input() desease: any;
+  desease: any;
+  deseaseId: any;
+  constructor(private activateRoute: ActivatedRoute, private deseasesService: DeseasesService) {
+    this.desease = this.deseasesService.getDeseaseDetail(this.activateRoute.params["id"])
+      this.activateRoute.queryParams.subscribe(queries => {
+      });
+  }
 
   ngOnInit() {
   }

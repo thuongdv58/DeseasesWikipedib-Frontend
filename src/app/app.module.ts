@@ -7,13 +7,15 @@ import { SearchComponent } from './search/search.component';
 import { DeseasesComponent } from './deseases/deseases.component';
 import { DeseaseDetailComponent } from './desease-detail/desease-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { AddDeseaseComponent } from './add-desease/add-desease.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     DeseasesComponent,
-    DeseaseDetailComponent
+    DeseaseDetailComponent,
+    AddDeseaseComponent
   ],
   imports: [
     BrowserModule,

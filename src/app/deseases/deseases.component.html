@@ -1,6 +1,13 @@
-<h3>Your searched result:</h3>
-<ul>
-    <li *ngFor ="let desease of deseases" (click) ="onSelect(desease)">{{desease.name}}</li>
-</ul>
+<div *ngIf="searchResults">
+  <h3>Found results for searched content "{{searchContent}}":</h3>
+  <ul>
+      <li *ngFor ="let desease of searchResults" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a></li>
+  </ul>
+</div>
 
-<app-desease-detail [desease] = "selectedDesease"></app-desease-detail>
+<div *ngIf="deseases">
+  <h3>List of deseases:</h3>
+  <ul>
+      <li *ngFor ="let desease of deseases" (click) ="onSelect(desease)"><a [routerLink] ="['/','desease-detail', desease.id]">{{desease.name}}</a></li>
+  </ul>
+</div>

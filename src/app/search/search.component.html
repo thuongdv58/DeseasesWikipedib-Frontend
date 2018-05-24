@@ -1,9 +1,9 @@
 <div class = "centered">
   <img src = "../assets/logo.png" alt= "Wikipedib">
-  <form class="form-wrapper cf" [formGroup]= "searchForm" (ngSubmit)= "search(searchForm.value)">
+  <form class="form-wrapper cf" [formGroup]= "searchForm" (ngSubmit)= "search(searchForm.value)" (keydown) = "keyDownFunction($event)">
     <input type="text" placeholder="Search here..." formControlName="searchContent">
     <ul>
-        <li *ngFor= "let recommendation of recommendations"><a href="#home">{{recommendation.name}}</a></li>
+        <li *ngFor= "let recommendation of recommendations"><a [routerLink] ="['/','desease-detail', recommendation.id]">{{recommendation.name}}</a></li>
     </ul>
     <button type="submit" [disabled] = "!searchForm.valid">Search</button>
   </form>

@@ -7,7 +7,7 @@ export class DeseasesService {
 
   constructor() { }
 
-  getDeseaseList(page: Number){
+  getDeseaseList(page: number) {
     return [
       { id: 11, name: 'Mr. Nice' },
       { id: 12, name: 'Narco' },
@@ -21,13 +21,21 @@ export class DeseasesService {
       { id: 20, name: 'Tornado' }
     ]
   }
-  getSpecificDesease(){
+  getDeseaseDetail(id: number) {
+    return {
+      id: 34,
+      name: "wha",
+      abstract: "A desease that kill everyone within minutes",
+      medicine: [
+        "shit",
+        "dog shit"
+      ]
+    }
+  }
+  updateADesease() {
 
   }
-  updateADesease(){
-
-  }
-  deleteADesease(){
+  deleteADesease() {
 
   }
 }
