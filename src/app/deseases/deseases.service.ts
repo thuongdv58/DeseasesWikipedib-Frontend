@@ -7,7 +7,7 @@ export class DeseasesService {
 
   constructor() { }
 
-  getDeseaseList(page: number) {
+  getDeseaseList(page: number, pageSize: number) {
     return [
       { id: 11, name: 'Mr. Nice', abstract: "what cause this desease?? so ez. It's because u eat too much shit in a short time! what cause this desease?? so ez. It's because u eat too much shit in a short time"},
       { id: 12, name: 'Narco', abstract: "what cause this desease?? so ez. It's because u eat too much shit in a short time! what cause this desease?? so ez. It's because u eat too much shit in a short time"},

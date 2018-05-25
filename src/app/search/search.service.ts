@@ -7,7 +7,7 @@ export class SearchService {
 
   constructor() { }
 
-  searchForDeseases(content: string, page: Number){
+  searchForDeseases(content: string, page: number, pageSize: number){
     return [{
       id: 1,
       name: "Blah blah benh",
